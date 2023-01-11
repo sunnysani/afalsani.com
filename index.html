@@ -1,0 +1,244 @@
+<html>
+    <head>
+        <title>Afalsani web</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;0,600;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> <!--TODO DELETE THIS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div id="nav-site-logo">
+                <a href="#">AfalSani</a>
+            </div>
+            <div id="nav-links">
+                <ul id="nav-links-text">
+                    <li><a class="nav-links-clickable">Profile</a></li>
+                    <li><a class="nav-links-clickable" href="http://portofolio.afalsani.com">Portofolio</a></li>
+                </ul>
+                <ul id="nav-links-svg">
+                    <li>
+                        <a class="nav-links-clickable" href="https://www.instagram.com/afalsani/">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-links-clickable" href="https://www.linkedin.com/in/naufal-sani-19271a192/">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- <div id="pinConrainer">
+            <div id="slideContainer"> -->
+                <section id="greetings" class="section">
+                    <div class="section-content">
+                        <div class="modal-black"></div>
+                        <div class="black-bg">
+                            <img id="greetings-img-0"/>
+                            <img id="greetings-img-1"/>
+                        </div>
+                        <div class="align-center">
+                            <div id="greetings-h1">
+                                <h1 class="animation-text">Greetings</h1>
+                            </div>
+                        </div>
+                        <div id="greetings-p">
+                            <p class="animation-text">
+                                My name's Naufal Sani. People usually calls me <b>Sani</b>.
+                                <br />
+                                I'm a student of <b>Computer Science at Universitas Indonesia</b>. An 8th semester student!
+                                <br />
+                                About my interest at techonology, <b>I love software engineering &#x1F60D;</b>. 
+                                <br />
+                                Wether it's a frontend, backend, devops. You can say I love fullstack engineering.
+                                <br />
+                                But not only limited to that, <b>I also have an interest in IoT and image processing</b>
+                                <br />
+                                though I never had the chance to explore those.
+                                <br />
+                                I'd love to be an <b>innovation driven person &#x1F3A8;</b> also a <b>target oriented person &#x1F3AF;</b>, so I'm always open to a new opportunity.
+                                <br />
+                                Besides programming, I also like gaming and watching. I like horror things because I'm not easly scared <b>&#x1F47B;</b>
+                            </p>
+                        </div>
+                        <div id="greetings-footer">
+                            <span id="greetings-img-desc">...</span>
+                            <span id="greetings-img-page">/</span>
+                        </div>
+                    </div>
+                </section>
+                <div id="aboutPinContainer">
+                    <div id="aboutSlideContainer">
+                        <section id="about" class="section">
+                            <div class="section-content">
+                                <div class="align-center">
+                                    <h1>&#x270B; About Me</h1>
+                                    <h4>Always Be Grateful For Everything That Have Ever Happened</h4>
+                                </div>
+                                <div class="flex-space-between" id="about-content">
+                                    <div id="about-content-right">
+                                        <ul>
+                                            <li id="about-li-0" selected><a onclick="return scrollAbout(0)">Education &#x1F4D6;</a></li>
+                                            <li id="about-li-1"><a onclick="return scrollAbout(1)">Free Time &#x1F551;</a></li>
+                                            <li id="about-li-2"><a onclick="return scrollAbout(2)">Work &#x1F4BB;</a></li>
+                                            <li id="about-li-3"><a onclick="return scrollAbout(3)">Interest &#x1F3D3;</a></li>
+                                            <li id="about-li-4"><a onclick="return scrollAbout(4)">Social Media &#x1F4AC;</a></li>
+                                        </ul>
+                                    </div>
+                                    <div id="about-content-left">
+                                        <div id="about-content-left-img-container">
+                                            <img class="about-content-left-img" reveal id="about-img-0" src="./img/about-education.jpeg" />
+                                            <img class="about-content-left-img" id="about-img-1" src="./img/about-free-time.jpg" />
+                                            <img class="about-content-left-img" id="about-img-2" src="./img/about-work.jpg" />
+                                            <img class="about-content-left-img" id="about-img-3" src="./img/about-interest.jpg" />
+                                            <img class="about-content-left-img" id="about-img-4" src="./img/about-social-media.jpg" />
+                                        </div>
+                                        <div id="about-content-left-text-container">
+                                            <p class="about-content-left-text" reveal id="about-text-0">I'm so grateful that I can study Computer Science in Universitas Indonesia. I get there through SIMAK UI (Student selection created and run by UI itself), it's my last chance to get to UI.<br /><br />I'm not that confident because I'm from a not so famous Highschool which was called SMA Negeri 1 Cileungsi, you may never heard it until now.<br /><br />Anyway, I tried my best to learn everything I could here in UI. Wether it's academic ot non-academic (gaining experience) through organization.</p>
+                                            <p class="about-content-left-text" id="about-text-1">I could do anything I want in my free time. I guess except for spending money since I don't have that much &#x1F623; xd <br /> I like to play DOTA 2 when I'm bored, also like watching things from netflix, or even code when I'm motivated (not sure why) *<i>rare occassion hahaha</i>*.</p>
+                                            <p class="about-content-left-text" id="about-text-2">Here is a picture of the application I've worked with. It's a simple store application. For more of my work, you can check on <a href="http://portofolio.afalsani.com"><b>portofolio.afalsani.com</b></a></p>
+                                            <p class="about-content-left-text" id="about-text-3">I have an interest in Software Engineering, wether it's on frontend side, or backend side, or even cloud programming side. Besides &#x1F913; stuff, I'd also like to write story and film it myself.<br /><br />Oooh, btw, I also like sports. I love playing any sport even when I'm not good at it &#x1F617;</p>
+                                            <p class="about-content-left-text" id="about-text-4">I'm not a social media person, so I rarely opens my Social Media because I don't feel any excitement in sharing my life &#x1F972; But i like to connect with my friends through Social Media like reacting to their post/story.<br /><br />I'd rather open TikTok because there is more laughter there since I like comedy soo much &#x1F60D;</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <section id="profile" class="section">
+                    <div class="section-content">
+                        <div>
+                            <div id="footer-animation-0" class="animation-bg">
+                                <div class="animation-text-bg">
+                                    <div class="animation-text">
+                                        <h1>GET IN TOUCH!</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-p">
+                                <p class="animation-text">Nice to meet you &#x1F606; Since I've introduced myself, now is your time to introduce yourself!</p>
+                                <p class="animation-text">Email me at <b>naufal.sani2001@gmail.com</b></p>
+                                <p class="animation-text">Or you can go ahead DM me on Instagram or Linkedin. Click the navbar button!</p>
+                            </div>
+                        </div>
+                        <div class="footer-p">
+                            <p class="animation-text"><b>&#x1F44B; Make sure to contact me so that we know each other</b></p>
+                        </div>
+                </section>
+            <!-- </div>
+        </div> -->
+
+
+        <script>
+            var controller = new ScrollMagic.Controller();
+            class imgWithDesc {
+                constructor(imgUrl, desc) {
+                    this.imgUrl = imgUrl;
+                    this.desc = desc;
+                }
+            }
+
+            // Greetings ---------
+            new ScrollMagic.Scene({triggerElement: "#greetings", duration: 800, triggerHook: 0})
+					.setClassToggle("#greetings-h1", "show") // add class toggle
+					.addTo(controller);
+            new ScrollMagic.Scene({triggerElement: "#greetings", duration: 800, triggerHook: 0})
+					.setClassToggle("#greetings-p", "show") // add class toggle
+					.addTo(controller);
+            new ScrollMagic.Scene({triggerElement: "#greetings", duration: 800, triggerHook: 0})
+					.setClassToggle("#greetings-footer", "show") // add class toggle
+					.addTo(controller);
+            // Greetings ---------\
+
+            // About -------
+            // https://blog.teamtreehouse.com/learn-asynchronous-image-loading-javascript
+            let index = 0;
+            const imageGreetingsWithDescList = [
+                new imgWithDesc('./img/0.JPG', `COVID ERA - Univ Circle Meetup. At last! We met again.`),
+                new imgWithDesc('./img/1.JPG', `My Sister Master Degree Graduation! With other siblings also!`),
+                new imgWithDesc('./img/2.png', `At Traveloka Campus (Tangerang, BSD) rooftop as an intern. Good times`),
+                new imgWithDesc('./img/3.JPG', `With my siblings, again. Somewhere at sukabumi`),
+                new imgWithDesc('./img/4.jpg', `Last photo at Traveloka Campus. My last day there. So memorable &#x1F97A;`),
+                new imgWithDesc('./img/5.JPG', `Still in COVID ERA - Univ Circle Meetup once again!`),
+                new imgWithDesc('./img/6.JPG', `Staycation with BEM Fasilkom UI 2019! Before COVID was the best!`),
+                new imgWithDesc('./img/7.JPG', `Academic Division from BETIS Program at Fasilkom UI - 2019 when I was a Staff`),
+                new imgWithDesc('./img/8.jpg', `BEM Fasilkom UI 2020! Academic and Student Development Department. I was the deputy`),
+                new imgWithDesc('./img/9.JPG', `Lebaran photo 2021 ✨ with my family`),
+                new imgWithDesc('./img/10.JPG', `Random photo at middle school graduation. Kinda awkward photo lol but amazing friend!`),
+                new imgWithDesc('./img/11.JPG', `7th Semester at Fasilkom UI. Some of us attended class, but some are doing internship`),
+                new imgWithDesc('./img/12.jpg', `Reunion with highschool friend (circle). I think it was at AEON`),
+                new imgWithDesc('./img/13.JPG', `Reunion with highschool friend (circle). I think it was at AEON (again) lol. We're not that creative (:`),
+
+            ]
+            const image_0 = document.getElementById('greetings-img-0');
+            const image_1 = document.getElementById('greetings-img-1');
+            const greetings_img_page = document.getElementById('greetings-img-page');
+            const greetings_img_desc = document.getElementById('greetings-img-desc');
+            const changeImgFunc = function() {
+                const imgSrc_0 = index % 2 == 0 ? imageGreetingsWithDescList[index % imageGreetingsWithDescList.length].imgUrl : image_0.src;
+                const imgSrc_1 = index % 2 != 0 ? imageGreetingsWithDescList[index % imageGreetingsWithDescList.length].imgUrl : image_1.src;
+                image_0.src = imgSrc_0;
+                image_1.src = imgSrc_1;
+                index % 2 == 0 ? image_0.classList.remove('hidden') : image_0.classList.add('hidden')
+                index % 2 != 0 ? image_1.classList.remove('hidden') : image_1.classList.add('hidden')
+                greetings_img_page.innerHTML = `${index % imageGreetingsWithDescList.length + 1} / ${imageGreetingsWithDescList.length}`
+                greetings_img_desc.innerHTML = imageGreetingsWithDescList[index % imageGreetingsWithDescList.length].desc;
+                index++;
+            }
+            changeImgFunc()
+            setInterval(changeImgFunc, 6000);
+            // About -------\
+			var scene = new ScrollMagic.Scene({triggerElement: "#aboutPinContainer", duration: 4000})
+							.setPin("#aboutPinContainer")
+                            .triggerHook(0)
+							.addTo(controller);
+            for (let i = 0; i < 5; i++) {
+                new ScrollMagic.Scene({triggerElement: "#aboutPinContainer", duration: 0, offset: 1000*i})
+                        .triggerHook(0)
+                        .on('start', () => changeAboutContent(i))
+                        .addTo(controller);
+                new ScrollMagic.Scene({triggerElement: "#aboutPinContainer", duration: 0, offset: 1000*(i+1) - 1})
+                        .triggerHook(0)
+                        .on('start', () => changeAboutContent(i))
+                        .addTo(controller);
+            }
+
+            selectedAboutIndex = 0;
+            function changeAboutContent(index) {
+                document.getElementById(`about-li-${selectedAboutIndex}`).removeAttribute('selected');
+                document.getElementById(`about-text-${selectedAboutIndex}`).removeAttribute('reveal');
+                document.getElementById(`about-img-${selectedAboutIndex}`).removeAttribute('reveal');
+
+                document.getElementById(`about-li-${index}`).setAttribute('selected', '');
+                document.getElementById(`about-text-${index}`).setAttribute('reveal', '');
+                document.getElementById(`about-img-${index}`).setAttribute('reveal', '');
+
+                selectedAboutIndex = index;
+            }
+
+            function scrollAbout(index) {
+                // Get section height and append it
+                window.scroll(
+                    {
+                        top: document.getElementById('greetings').offsetHeight + 1000 * index,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+            }
+
+            // Profile Contact ---------------
+            new ScrollMagic.Scene({triggerElement: "#profile", duration: 2000, triggerHook: 0.5})
+					.setClassToggle("#footer-animation-0", "show") // add class toggle
+					.addTo(controller);
+            new ScrollMagic.Scene({triggerElement: "#profile", duration: 2000, triggerHook: 0.5})
+					.setClassToggle(".footer-p", "show") // add class toggle
+					.addTo(controller);
+            // Profile Contact ---------------\
+        </script>
+    </body>
+</html>
