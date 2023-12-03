@@ -49,7 +49,7 @@
                     <div class="section-content">
                         <div class="modal-black"></div>
                         <div class="black-bg">
-                            <img id="greetings-img-0" src="./img/0.webp" alt="COVID ERA - Univ Circle Meetup. At last! We met again."/>
+                            <img id="greetings-img-0" src="./img/0.webp" class="hidden" alt="COVID ERA - Univ Circle Meetup. At last! We met again."/>
                             <img id="greetings-img-1" src="./img/1.webp" class="hidden" alt="My Sister Master Degree Graduation! With other siblings also!"/>
                             <img id="greetings-img-2" src="./img/2.webp" class="hidden" alt="At Traveloka Campus (Tangerang, BSD) rooftop as an intern. Good times"/>
                             <img id="greetings-img-3" src="./img/3.webp" class="hidden" alt="With my siblings, again. Somewhere at sukabumi"/>
@@ -208,7 +208,8 @@
                 greetings_img_desc.innerHTML = imageGreetingsWithDescList[index % imageGreetingsWithDescList.length].desc;
                 index++;
             }
-                greetings_img_page.innerHTML = `1 / ${imageGreetingsWithDescList.length}`
+            document.getElementById('greetings-img-0').classList.remove('hidden');
+            greetings_img_page.innerHTML = `1 / ${imageGreetingsWithDescList.length}`
             setInterval(changeImgFunc, 6000);
 
             // About -------\
