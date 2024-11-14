@@ -79,6 +79,16 @@ const theme = createTheme({
         },
       },
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: StyleConstant.MAIN_BLUE_80,
+          color: StyleConstant.WHITE,
+          padding: "6px 12px",
+          textTransform: "unset",
+        },
+      },
+    },
     MuiChip: {
       styleOverrides: {
         root: {
@@ -137,7 +147,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Helvatica", "Helvetica Oblique"].join(","),
+    fontFamily: ["Helvetica", "Helvetica Oblique"].join(","),
     Title1Bold: {
       fontSize: 24,
       fontWeight: 700,
@@ -176,7 +186,7 @@ const theme = createTheme({
       fontWeight: 400,
     },
     caption: {
-      fontFamily: "Helvatica Oblique",
+      fontFamily: "Helvetica Oblique",
       fontSize: 12,
       fontWeight: 400,
     },
