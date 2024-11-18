@@ -23,10 +23,9 @@ const myTechStacks: TechnologyStackItem[] = [
     title: "Coding",
     description: (
       <>
-        Brings&nbsp;<strong>structured</strong>&nbsp;and&nbsp;
-        <strong>systemized.</strong>
+        Brings <strong>structured</strong> and <strong>systemized</strong> code.
         <br />
-        Writes&nbsp;continuous&nbsp;for&nbsp;future&nbsp;Engineers.
+        Writes continuous code for future Engineers.
       </>
     ),
     sections: [
@@ -84,10 +83,10 @@ const myTechStacks: TechnologyStackItem[] = [
     title: "System",
     description: (
       <>
-        Understands&nbsp;<strong>Computer&nbsp;System</strong>&nbsp;and&nbsp;
-        <strong>Architecture</strong>.
+        Understands <strong>Computer&nbsp;System</strong> and{" "}
+        <strong>Software&nbsp;Architecture</strong>.
         <br />
-        Builds&nbsp;scalable&nbsp;&&nbsp;robust&nbsp;system&nbsp;is&nbsp;the&nbsp;first&nbsp;target.
+        Builds scalable & robust system is the first target.
       </>
     ),
     sections: [
@@ -182,7 +181,7 @@ const TechnologyStack = () => (
       </Typography>
       <Grid container>
         {myTechStacks.map((techStack) => (
-          <Grid item xs={12} md={12} lg={6} p={1}>
+          <Grid item xs={12} md={12} lg={6} p="8px 32px">
             <Card
               sx={{
                 m: "auto",
@@ -197,7 +196,7 @@ const TechnologyStack = () => (
                   {techStack.description}
                 </Typography>
                 {techStack.sections.map((section) => (
-                  <Stack width={360}>
+                  <Stack width={240}>
                     <Typography
                       variant="Title4Bold"
                       color={StyleConstant.AMAZING_BLUE}
