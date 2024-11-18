@@ -14,6 +14,7 @@ declare module "@mui/material/styles" {
     Title4Bold: React.CSSProperties;
     Title4Regular: React.CSSProperties;
     body: React.CSSProperties;
+    bodyLongHeight: React.CSSProperties;
     caption: React.CSSProperties;
   }
 
@@ -27,6 +28,7 @@ declare module "@mui/material/styles" {
     Title4Bold: React.CSSProperties;
     Title4Regular: React.CSSProperties;
     body: React.CSSProperties;
+    bodyLongHeight: React.CSSProperties;
     caption: React.CSSProperties;
   }
 }
@@ -42,6 +44,7 @@ declare module "@mui/material/Typography" {
     Title4Bold: true;
     Title4Regular: true;
     body: true;
+    bodyLongHeight: true;
     caption: true;
   }
 }
@@ -183,6 +186,11 @@ const theme = createTheme({
     },
     body: {
       fontSize: 14,
+      fontWeight: 400,
+    },
+    bodyLongHeight: {
+      fontSize: 14,
+      lineHeight: 24,
       fontWeight: 400,
     },
     caption: {

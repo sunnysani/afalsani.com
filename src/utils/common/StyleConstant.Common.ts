@@ -3,6 +3,7 @@ class StyleConstant {
   public static readonly MAIN_BLUE_40 = "#D7E8FF";
   public static readonly MAIN_BLUE_80 = "#94B5F8";
   public static readonly MAIN_BLUE_100 = "#7E99D8";
+  public static readonly AMAZING_BLUE = "#4B5D89";
 
   public static readonly ERROR_MAIN = "#E90C0C";
 

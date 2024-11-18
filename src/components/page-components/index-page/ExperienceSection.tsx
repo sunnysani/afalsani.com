@@ -26,8 +26,12 @@ const ExperienceSection = () => {
         </Typography>
         <Typography
           variant="body"
-          color={StyleConstant.WHITE}
           textAlign="center"
+          sx={{
+            background: `linear-gradient(to top right, ${StyleConstant.WHITE}, ${StyleConstant.BG})`,
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
         >
           3 internships as a university student
           <br />2 full time job after graduation

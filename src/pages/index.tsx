@@ -1,5 +1,6 @@
 import ExperienceSection from "@/components/page-components/index-page/ExperienceSection";
 import GreetingSection from "@/components/page-components/index-page/GreetingsSection";
+import TechnologyStack from "@/components/page-components/index-page/TechnologyStackSection";
 import { Button, Stack, Typography, useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -21,6 +22,7 @@ const MainPage = () => {
       </Link>
       <GreetingSection />
       <ExperienceSection />
+      <TechnologyStack />
       <Typography
         sx={{ mt: 8, mb: 8 }}
         textAlign="center"

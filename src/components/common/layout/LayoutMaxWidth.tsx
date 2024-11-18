@@ -16,7 +16,7 @@ const LayoutMaxWidth: FC<{ children: ReactNode; color?: string }> = ({
     >
       <div
         style={{
-          maxWidth: 800,
+          maxWidth: 880,
           paddingRight: 16,
           paddingLeft: 16,
         }}
