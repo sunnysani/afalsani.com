@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: Helvetica;
   line-height: 1.5;
@@ -17,35 +21,35 @@ body {
 
 @font-face {
   font-family: "Helvetica";
-  src: url("/public/fonts/Helvetica.ttf") format("truetype");
+  src: url("/fonts/Helvetica.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Helvetica";
-  src: url("/public/fonts/Helvetica-Bold.ttf") format("truetype");
+  src: url("/fonts/Helvetica-Bold.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Helvetica";
-  src: url("/public/fonts/Helvetica-Light.ttf") format("truetype");
+  src: url("/fonts/Helvetica-Light.ttf") format("truetype");
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Helvetica Oblique";
-  src: url("/public/fonts/Helvetica-Oblique.ttf") format("truetype");
+  src: url("/fonts/Helvetica-Oblique.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Helvetica Oblique";
-  src: url("/public/fonts/Helvetica-BoldOblique.ttf") format("truetype");
+  src: url("/fonts/Helvetica-BoldOblique.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }
