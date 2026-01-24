@@ -1,5 +1,7 @@
+import IndexPage from "@/components/page-components/index/IndexPage";
+
 const MainPage = () => {
-  return <div>Light Rays</div>;
+  return <IndexPage />;
 };
 
 export default MainPage;
