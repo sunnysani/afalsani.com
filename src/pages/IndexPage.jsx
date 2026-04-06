@@ -158,12 +158,12 @@ export default function IndexPage() {
             color: 'text.secondary',
             mb: { xs: 5, md: 7 },
             fontSize: '1rem',
-            maxWidth: 380,
+            maxWidth: 480,
             mx: 'auto',
             lineHeight: 1.7,
           }}
         >
-          Portfolio is public-facing. My Tools is your personal workspace.
+          Portfolio is public-facing. My Tools is for afalsani's workspace.
         </Typography>
 
         {/* Cards */}
