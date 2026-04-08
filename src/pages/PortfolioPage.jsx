@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from '@mui/material'
 import { alpha, useTheme } from '@mui/material/styles'
 import { useNavigate } from 'react-router-dom'
-import { HomeOutlined, ConstructionOutlined } from '@mui/icons-material'
+import { HomeOutlined, ConstructionOutlined, DescriptionOutlined } from '@mui/icons-material'
 
 export default function PortfolioPage() {
   const navigate = useNavigate()
@@ -85,22 +85,42 @@ export default function PortfolioPage() {
           The portfolio is being crafted. Check back soon for projects, case studies, and more.
         </Typography>
 
-        <Button
-          variant="outlined"
-          startIcon={<HomeOutlined />}
-          onClick={() => navigate('/')}
-          sx={{
-            borderColor: theme.palette.divider,
-            color: 'text.secondary',
-            '&:hover': {
-              borderColor: alpha(theme.palette.primary.main, 0.4),
-              color: 'primary.main',
-              bgcolor: alpha(theme.palette.primary.main, 0.06),
-            },
-          }}
-        >
-          Back to Home
-        </Button>
+        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Button
+            variant="outlined"
+            startIcon={<DescriptionOutlined />}
+            href="https://docs.google.com/document/d/12J-2erEb8mM7j47PzqZo-IZKJUPBDcYGeWFmEX8yAh4/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              borderColor: alpha(theme.palette.secondary.main, 0.4),
+              color: 'secondary.main',
+              '&:hover': {
+                borderColor: 'secondary.main',
+                bgcolor: alpha(theme.palette.secondary.main, 0.06),
+              },
+            }}
+          >
+            View Resume
+          </Button>
+
+          <Button
+            variant="outlined"
+            startIcon={<HomeOutlined />}
+            onClick={() => navigate('/')}
+            sx={{
+              borderColor: theme.palette.divider,
+              color: 'text.secondary',
+              '&:hover': {
+                borderColor: alpha(theme.palette.primary.main, 0.4),
+                color: 'primary.main',
+                bgcolor: alpha(theme.palette.primary.main, 0.06),
+              },
+            }}
+          >
+            Back to Home
+          </Button>
+        </Box>
       </Box>
     </Box>
   )
