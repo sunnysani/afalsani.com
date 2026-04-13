@@ -155,7 +155,7 @@ export default function ExpensePage() {
       return appendSheetRow(activeConfig.spreadsheetId, sheetName, apiKey.trim(), row)
     },
     onSuccess: () => {
-      setSnackbar({ open: true, message: 'Expense recorded successfully! 🎉', severity: 'success' })
+      setSnackbar({ open: true, message: 'Expense recorded.', severity: 'success' })
       setForm(EMPTY_FORM)
       setFormErr({})
     },
@@ -634,7 +634,7 @@ export default function ExpensePage() {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <Typography sx={{ color: 'primary.main', fontWeight: 700, fontSize: '0.9rem', fontFamily: '"Sora", sans-serif' }}>
+                      <Typography sx={{ color: 'primary.main', fontWeight: 700, fontSize: '0.9rem', fontFamily: '"Outfit", sans-serif' }}>
                         Rp
                       </Typography>
                     </InputAdornment>
@@ -771,7 +771,7 @@ export default function ExpensePage() {
         onClose={() => setDeleteDialogConfig(null)}
         PaperProps={{ sx: { borderRadius: 3, minWidth: 300 } }}
       >
-        <DialogTitle sx={{ fontFamily: '"Sora", sans-serif', fontWeight: 700, fontSize: '1rem', pb: 1 }}>
+        <DialogTitle sx={{ fontFamily: '"Outfit", sans-serif', fontWeight: 700, fontSize: '1rem', pb: 1 }}>
           Remove Configuration
         </DialogTitle>
         <DialogContent>

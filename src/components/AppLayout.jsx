@@ -1,6 +1,6 @@
 import {
   Box, AppBar, Toolbar, IconButton, Typography,
-  Breadcrumbs, Link, useMediaQuery, Tooltip,
+  Breadcrumbs, Link, useMediaQuery,
 } from '@mui/material'
 import {
   ArrowBack, HomeOutlined,
@@ -11,16 +11,16 @@ import { alpha, useTheme } from '@mui/material/styles'
 import { useThemeMode } from '../context/ThemeContext'
 
 const ROUTE_LABELS = {
-  '/': 'Home',
-  '/portfolio': 'Portfolio',
-  '/my-tools': 'My Tools',
+  '/':               'Home',
+  '/portfolio':      'Portfolio',
+  '/my-tools':       'My Tools',
   '/my-tools/expense': 'Expense Tracker',
 }
 
 function buildCrumbs(pathname) {
-  const parts = pathname.split('/').filter(Boolean)
+  const parts  = pathname.split('/').filter(Boolean)
   const crumbs = [{ label: 'Home', path: '/' }]
-  let current = ''
+  let current  = ''
   for (const part of parts) {
     current += `/${part}`
     const label = ROUTE_LABELS[current]
@@ -30,84 +30,97 @@ function buildCrumbs(pathname) {
 }
 
 export default function AppLayout({ children, title, maxWidth = 'lg' }) {
-  const navigate = useNavigate()
-  const { pathname } = useLocation()
-  const isMobile = useMediaQuery('(max-width:600px)')
-  const theme = useTheme()
+  const navigate       = useNavigate()
+  const { pathname }   = useLocation()
+  const isMobile       = useMediaQuery('(max-width:600px)')
+  const theme          = useTheme()
   const { toggleMode } = useThemeMode()
-  const isDark = theme.palette.mode === 'dark'
+  const isDark         = theme.palette.mode === 'dark'
 
-  const crumbs = buildCrumbs(pathname)
-  const pageTitle = title || ROUTE_LABELS[pathname] || 'Personal Hub'
+  const crumbs    = buildCrumbs(pathname)
+  const pageTitle = title || ROUTE_LABELS[pathname] || 'afalsani'
 
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
+    <Box sx={{ minHeight: '100dvh', bgcolor: 'background.default' }}>
       <AppBar
         position="sticky"
         elevation={0}
         sx={{
-          bgcolor: isDark
-            ? alpha(theme.palette.background.default, 0.88)
-            : alpha(theme.palette.background.paper, 0.92),
-          backdropFilter: 'blur(16px)',
-          borderBottom: `1px solid ${theme.palette.divider}`,
+          bgcolor:        isDark
+            ? alpha(theme.palette.background.default, 0.85)
+            : alpha(theme.palette.background.paper,   0.9),
+          backdropFilter: 'blur(20px)',
+          borderBottom:   `1px solid ${theme.palette.divider}`,
         }}
       >
-        <Toolbar sx={{ gap: 1 }}>
+        <Toolbar sx={{ gap: 1, minHeight: { xs: 52, sm: 56 } }}>
           <IconButton
             size="small"
             onClick={() => navigate(-1)}
             sx={{
-              color: 'primary.main',
-              bgcolor: alpha(theme.palette.primary.main, 0.1),
-              border: '1px solid',
-              borderColor: alpha(theme.palette.primary.main, 0.2),
-              '&:hover': { bgcolor: alpha(theme.palette.primary.main, 0.18) },
+              color:       'primary.main',
+              bgcolor:     alpha(theme.palette.primary.main, 0.08),
+              border:      '1px solid',
+              borderColor: alpha(theme.palette.primary.main, 0.18),
+              width:       32,
+              height:      32,
+              transition:  'all 0.18s ease',
+              '&:hover': {
+                bgcolor:     alpha(theme.palette.primary.main, 0.15),
+                borderColor: alpha(theme.palette.primary.main, 0.35),
+              },
               mr: 0.5,
             }}
           >
-            <ArrowBack fontSize="small" />
+            <ArrowBack sx={{ fontSize: 16 }} />
           </IconButton>
 
           <Typography
             variant="subtitle1"
             sx={{
-              fontFamily: '"Sora", sans-serif',
-              fontWeight: 700,
-              flexGrow: 1,
+              fontFamily:    '"Outfit", sans-serif',
+              fontWeight:    700,
+              flexGrow:      1,
               letterSpacing: '-0.01em',
-              fontSize: isMobile ? '0.9rem' : '1rem',
-              color: 'text.primary',
+              fontSize:      isMobile ? '0.9rem' : '1rem',
+              color:         'text.primary',
             }}
           >
             {pageTitle}
           </Typography>
 
-          <Tooltip title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}>
-            <IconButton
-              size="small"
-              onClick={toggleMode}
-              sx={{
-                color: 'text.secondary',
-                '&:hover': {
-                  color: 'primary.main',
-                  bgcolor: alpha(theme.palette.primary.main, 0.08),
-                },
-              }}
-            >
-              {isDark ? <LightModeOutlined fontSize="small" /> : <DarkModeOutlined fontSize="small" />}
-            </IconButton>
-          </Tooltip>
+          <IconButton
+            size="small"
+            onClick={toggleMode}
+            sx={{
+              width:   32,
+              height:  32,
+              color:   'text.secondary',
+              transition: 'all 0.18s ease',
+              '&:hover': {
+                color:   'primary.main',
+                bgcolor: alpha(theme.palette.primary.main, 0.07),
+              },
+            }}
+          >
+            {isDark
+              ? <LightModeOutlined sx={{ fontSize: 16 }} />
+              : <DarkModeOutlined  sx={{ fontSize: 16 }} />
+            }
+          </IconButton>
 
           <IconButton
             size="small"
             onClick={() => navigate('/')}
             sx={{
-              color: 'text.secondary',
+              width:   32,
+              height:  32,
+              color:   'text.secondary',
+              transition: 'color 0.18s ease',
               '&:hover': { color: 'text.primary' },
             }}
           >
-            <HomeOutlined fontSize="small" />
+            <HomeOutlined sx={{ fontSize: 18 }} />
           </IconButton>
         </Toolbar>
 
@@ -116,8 +129,8 @@ export default function AppLayout({ children, title, maxWidth = 'lg' }) {
             <Breadcrumbs
               sx={{
                 '& .MuiBreadcrumbs-separator': {
-                  color: alpha(theme.palette.text.secondary, 0.5),
-                  mx: 0.5,
+                  color: alpha(theme.palette.text.secondary, 0.45),
+                  mx:    0.5,
                 },
               }}
             >
@@ -126,7 +139,7 @@ export default function AppLayout({ children, title, maxWidth = 'lg' }) {
                 return isLast ? (
                   <Typography
                     key={c.path}
-                    sx={{ fontSize: '0.72rem', color: 'primary.main', fontWeight: 600 }}
+                    sx={{ fontSize: '0.71rem', color: 'primary.main', fontWeight: 600 }}
                   >
                     {c.label}
                   </Typography>
@@ -136,9 +149,9 @@ export default function AppLayout({ children, title, maxWidth = 'lg' }) {
                     onClick={() => navigate(c.path)}
                     underline="hover"
                     sx={{
-                      fontSize: '0.72rem',
-                      color: 'text.secondary',
-                      cursor: 'pointer',
+                      fontSize: '0.71rem',
+                      color:    'text.secondary',
+                      cursor:   'pointer',
                       '&:hover': { color: 'text.primary' },
                     }}
                   >
@@ -154,9 +167,9 @@ export default function AppLayout({ children, title, maxWidth = 'lg' }) {
       <Box
         sx={{
           maxWidth: maxWidth === 'lg' ? 1100 : maxWidth === 'md' ? 768 : 600,
-          mx: 'auto',
-          px: { xs: 2, sm: 3, md: 4 },
-          py: { xs: 3, md: 4 },
+          mx:       'auto',
+          px:       { xs: 2, sm: 3, md: 4 },
+          py:       { xs: 3.5, md: 5 },
         }}
       >
         {children}
