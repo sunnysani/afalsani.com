@@ -1,10 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Background -->
-  <rect width="32" height="32" rx="7" fill="#EEF2FF"/>
-  <!-- Outer A -->
-  <polygon points="16,5 28.5,27 3.5,27" fill="#2D55D4"/>
-  <!-- Inner cutout -->
-  <polygon points="16,11.5 24,27 8,27" fill="#EEF2FF"/>
-  <!-- Crossbar -->
-  <rect x="9.5" y="18.5" width="13" height="3" rx="0.5" fill="#2D55D4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="8" fill="#1A1C21"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.2">
+    <path d="M9 24V9" stroke="#EEF0F3"/>
+    <path d="M23 23V8" stroke="#EEF0F3"/>
+    <path d="M9 9l14 14" stroke="#FF2563"/>
+  </g>
 </svg>

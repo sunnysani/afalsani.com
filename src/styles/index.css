@@ -1,0 +1,186 @@
+@import "tailwindcss";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@theme {
+  /* Palette — soft dark canvas, warm pink accent used sparingly */
+  --color-bg: #1a1c21;
+  --color-bg-soft: #20232a;
+  --color-surface: #262931;
+  --color-surface-hover: #2e313a;
+  --color-foreground: #eef0f3;
+  --color-muted: #a6a7b0;
+  --color-faint: #8f909c;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
+
+  --color-primary: #ff2563;
+  --color-primary-soft: #ff6f93;
+  --color-primary-dim: rgba(255, 37, 99, 0.12);
+
+  --font-display: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+  --font-mono: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-display);
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis-weight: none;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Visible keyboard focus across all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Subtle scrollbar tuned to the dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-hover);
+  border-radius: 9999px;
+  border: 2px solid var(--color-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #26262c;
+}
+
+/* Soft section label — calm muted text, single small accent dot */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--color-muted);
+}
+.label::before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: var(--color-primary);
+}
+
+/* Scroll-reveal: starts hidden, .is-visible slides/fades in */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero on-load cascade */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-line {
+  opacity: 0;
+  animation: hero-rise 0.6s ease forwards;
+}
+
+/* Gentle scroll cue bob */
+@keyframes hero-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+.hero-bob {
+  display: inline-block;
+  animation: hero-bob 2.4s ease-in-out infinite;
+}
+
+/* Modal showcase */
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.overlay-in {
+  animation: overlay-in 0.2s ease forwards;
+}
+.panel-in {
+  animation: panel-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-line,
+  .hero-bob {
+    opacity: 1;
+    animation: none;
+  }
+  .overlay-in,
+  .panel-in {
+    animation: none;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/naufalsani/work/tokkoo-web/src/**)",
+      "Read(//Users/naufalsani/work/tokkoo-web/src/components/ui/**)",
+      "Read(//Users/naufalsani/work/tokkoo-web/**)",
+      "Bash(git -C /Users/naufalsani/work/afalsani.com show HEAD:package.json)",
+      "Bash(npx -y skills find \"web design\")",
+      "Bash(mktemp -d)",
+      "Bash(npm_config_cache=$\\(mktemp -d\\) npx -y skills find \"web design\")",
+      "Bash(npm_config_cache=$\\(mktemp -d\\) npx -y skills find \"frontend design\")",
+      "Bash(npm_config_cache=$\\(mktemp -d\\) npx -y skills add anthropics/claude-plugins-public@frontend-design -g -y)",
+      "Read(//Users/naufalsani/.claude/skills/**)",
+      "Read(//Users/naufalsani/.agents/skills/**)",
+      "Read(//private/var/folders/dk/2zc8s4l168l4t6qc11977gnw0000gn/T/**)",
+      "Read(//private/var/folders/dk/2zc8s4l168l4t6qc11977gnw0000gn/T/tmp.F7OsVYUIEm/**)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm_config_cache=$\\(mktemp -d\\) curl -s \"https://skills.sh/api/skills/anthropics/claude-plugins-public/frontend-design\")",
+      "Bash(gh api *)",
+      "Bash(gh repo *)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' https://raw.githubusercontent.com/anthropics/claude-plugins-public/main/__TRACKED_VAR__)",
+      "Bash(pnpm -v)",
+      "Read(//Users/naufalsani/Downloads/**)",
+      "Bash(grep -iE '\\\\.\\(pdf|jpg|jpeg|png|webp\\)$')",
+      "Bash(cp ~/Downloads/Resume.pdf public/Resume.pdf)",
+      "Bash(command -v sips)",
+      "Bash(cp ~/Downloads/1775661975304.png /tmp/portrait_src.png)",
+      "Bash(sips -Z 800 /tmp/portrait_src.png --out public/portrait.jpg -s format jpeg -s formatOptions 82)",
+      "Bash(cp ~/Downloads/1775661975304.png public/portrait.jpg)",
+      "Bash(command -v cwebp)",
+      "Bash(cwebp -version)",
+      "Bash(command -v magick)",
+      "Bash(command -v convert)"
+    ]
+  }
+}
