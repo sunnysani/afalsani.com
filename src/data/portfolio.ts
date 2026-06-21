@@ -5,17 +5,17 @@ export const profile = {
   current: 'Shopee',
   past: ['EY', 'Samsung', 'Traveloka'],
   tagline:
-    'Building software where business and engineering meet — products that work, and matter.',
+    'I build where business and engineering meet — products that ship and hold up in the real world.',
   intro:
-    'I work best where business and engineering meet, turning messy problems into products ' +
-    'people actually rely on. I care about the craft behind the screen: clean, scalable code ' +
-    'and the small details that make software feel effortless. Curiosity keeps me learning, ' +
-    'and shipping things that matter keeps me going.',
+    'I work best where business and engineering meet — turning ambiguous requirements into ' +
+    'products people depend on day to day. I care about the fundamentals: clean, scalable code ' +
+    'and the small details that make software feel effortless to use. I like shipping early, ' +
+    'learning from real usage, and improving from there.',
   aiming: [
-    'Software that empowers people and the businesses they run',
-    'Helping others reach their goals through what I build',
+    'Software that makes real work simpler for the people and businesses who depend on it',
+    'Engineering that turns into outcomes — adoption, cost saved, time back — not just shipped features',
   ],
-  closing: "Let's connect and build something that matters.",
+  closing: "Let's build something worth shipping.",
   email: 'naufal.sani2001@gmail.com',
   resumeUrl: '/Resume.pdf',
   portrait: '/portrait.jpg',
@@ -41,9 +41,9 @@ export const experiences: Experience[] = [
     role: 'Software Engineer (Web)',
     period: 'Feb 2025 — Present',
     summary:
-      "Builds and maintains the Notification module on Shopee's customer-facing web " +
-      'platform and its internal tooling, with AI agents turning dense specs into ' +
-      'ship-ready documentation in record time.',
+      "Builds and maintains the Notification module across Shopee's customer-facing web " +
+      'platform and its internal tooling, and uses AI agents to turn dense specs into ' +
+      'ship-ready documentation.',
     stack: ['ReactJS', 'TypeScript', 'AI Agents'],
   },
   {
@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
       "Helped bring living rooms to life through Ambient and Art Mode display features " +
       "across 50+ QLED sets and Samsung's 'The Frame' TVs worldwide. Certified Samsung " +
       'Professional Software Engineer.',
-    stack: ['Tizen', 'JavaScript', 'C++'],
+    stack: ['Tizen', 'C#', '.NET'],
   },
   {
     company: 'Cofounderie',
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     role: 'Solution Developer (Lead Web Developer) · EY',
     impact: 'Used across 3,000+ outlets nationally',
     status: '3,000+ outlets',
-    stack: ['ReactJS', 'Modern Web Libraries'],
+    stack: ['ReactJS', 'TanStack Query'],
     featured: true,
     shots: [
       { src: '/projects/dxmi/dxmi-login.webp', caption: 'Sign in' },
@@ -254,7 +254,7 @@ export const projects: Project[] = [
       "QLED/Neo QLED sets and the 'The Frame' lineup, deployed internationally.",
     role: 'Software Engineer · Samsung',
     status: '50+ models',
-    stack: ['Tizen', 'DotNet', 'C#'],
+    stack: ['Tizen', 'C#', '.NET'],
     featured: false,
     shots: [
       { src: '/projects/art-and-ambient/art-frame.webp', caption: 'Art Mode on The Frame' },

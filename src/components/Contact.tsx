@@ -31,19 +31,19 @@ export function Contact() {
           Open to roles, collaborations, or a good conversation. The inbox is always on.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-10 flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center">
           <button
             onClick={copyEmail}
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
+            className="group inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 text-sm font-medium text-white transition-transform duration-200 hover:-translate-y-0.5 sm:px-7"
           >
-            {copied ? 'Copied to clipboard' : profile.email}
-            <span aria-hidden className="opacity-80">
+            <span className="truncate">{copied ? 'Copied to clipboard' : profile.email}</span>
+            <span aria-hidden className="shrink-0 opacity-80">
               {copied ? '✓' : '⧉'}
             </span>
           </button>
           <button
             onClick={() => setResumeOpen(true)}
-            className="rounded-full border border-border-strong px-7 py-3.5 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
+            className="rounded-full border border-border-strong px-6 py-3.5 text-sm font-medium transition-colors hover:border-primary hover:text-primary sm:px-7"
           >
             View résumé
           </button>
