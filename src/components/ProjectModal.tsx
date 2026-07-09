@@ -120,25 +120,26 @@ export function ProjectModal({ projects, index, onClose, onIndex }: Props) {
         className="panel-in relative flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-lg border border-border bg-bg-soft shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
-        <div className="flex shrink-0 items-start justify-between gap-4 border-b border-border px-6 py-4 sm:px-7">
-          <div>
-            <p className="text-xs text-muted">{project.context}</p>
-            <div className="mt-1 flex items-baseline gap-3">
-              <h3 className="text-xl font-semibold tracking-tight">{project.title}</h3>
-              <span className="text-xs text-faint">{project.year}</span>
+        {/* Header — controls share the top row with the eyebrow so the title
+            below always gets the panel's full width and never wraps against them */}
+        <div className="shrink-0 border-b border-border px-6 py-4 sm:px-7">
+          <div className="flex items-center justify-between gap-4">
+            <p className="min-w-0 truncate text-xs text-muted">{project.context}</p>
+            <div className="flex shrink-0 items-center gap-2">
+              <button onClick={() => go(-1)} aria-label="Previous project" className={iconBtn}>
+                ‹
+              </button>
+              <button onClick={() => go(1)} aria-label="Next project" className={iconBtn}>
+                ›
+              </button>
+              <button ref={closeRef} onClick={onClose} aria-label="Close" className={iconBtn}>
+                ✕
+              </button>
             </div>
           </div>
-          <div className="flex shrink-0 items-center gap-2">
-            <button onClick={() => go(-1)} aria-label="Previous project" className={iconBtn}>
-              ‹
-            </button>
-            <button onClick={() => go(1)} aria-label="Next project" className={iconBtn}>
-              ›
-            </button>
-            <button ref={closeRef} onClick={onClose} aria-label="Close" className={iconBtn}>
-              ✕
-            </button>
+          <div className="mt-1.5 flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+            <h3 className="text-xl font-semibold tracking-tight">{project.title}</h3>
+            <span className="text-xs text-faint">{project.year}</span>
           </div>
         </div>
 

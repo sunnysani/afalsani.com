@@ -89,12 +89,22 @@ export function Nav() {
             </li>
           ))}
         </ul>
-        <a
-          href={`mailto:${profile.email}`}
-          className="hidden rounded-full border border-border-strong px-4 py-1.5 text-sm text-foreground transition-colors hover:border-primary hover:text-primary md:inline-flex"
-        >
-          Get in touch
-        </a>
+        <div className="hidden items-center gap-5 md:flex">
+          <a
+            href={profile.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-muted transition-colors hover:text-foreground"
+          >
+            Résumé
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            className="rounded-full border border-border-strong px-4 py-1.5 text-sm text-foreground transition-colors hover:border-primary hover:text-primary"
+          >
+            Get in touch
+          </a>
+        </div>
 
         {/* Mobile menu toggle */}
         <button
@@ -143,13 +153,22 @@ export function Nav() {
               </a>
             </li>
           ))}
-          <li className="mt-2">
+          <li className="mt-2 flex flex-wrap gap-3">
             <a
               href={`mailto:${profile.email}`}
               onClick={() => setMenuOpen(false)}
-              className="inline-flex rounded-full border border-border-strong px-4 py-2 text-sm text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex rounded-full bg-primary px-4 py-2 text-sm font-medium text-white"
             >
               Get in touch
+            </a>
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="inline-flex rounded-full border border-border-strong px-4 py-2 text-sm text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              Résumé
             </a>
           </li>
         </ul>

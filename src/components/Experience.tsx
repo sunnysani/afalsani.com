@@ -12,11 +12,19 @@ export function Experience() {
           {experiences.map((exp, i) => (
             <Reveal as="li" key={exp.company} delay={Math.min(i, 3) * 70}>
               <div className="grid gap-2 border-b border-border py-8 md:grid-cols-[10rem_1fr] md:gap-8 md:py-10">
-                <span className="text-sm text-muted">{exp.period}</span>
+                <span className="flex flex-wrap items-center gap-2 self-start text-sm text-muted md:flex-col md:items-start">
+                  {exp.period}
+                  {exp.period.includes('Present') && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-dim px-2.5 py-0.5 text-xs font-medium text-primary-soft">
+                      <span aria-hidden className="h-1 w-1 rounded-full bg-primary" />
+                      Now
+                    </span>
+                  )}
+                </span>
                 <div>
                   <div className="flex flex-wrap items-baseline gap-x-3">
                     <h3 className="text-xl font-semibold tracking-tight">{exp.role}</h3>
-                    <span className="text-faint">·</span>
+                    <span className="hidden text-faint sm:inline">·</span>
                     <a
                       href={exp.href}
                       target="_blank"

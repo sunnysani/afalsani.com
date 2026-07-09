@@ -48,7 +48,7 @@ export function Projects() {
                   type="button"
                   onClick={() => setOpen(i)}
                   aria-label={`Open ${p.title} showcase`}
-                  className="group block w-full overflow-hidden rounded-lg border border-border"
+                  className="group block w-full overflow-hidden rounded-lg border border-border transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_48px_-12px_rgba(255,37,99,0.28)]"
                 >
                   <div className="aspect-[16/10] w-full bg-bg-soft transition-transform duration-500 ease-out group-hover:scale-[1.02]">
                     <ShotImage shot={p.shots[0]} fit="contain" />
@@ -57,7 +57,9 @@ export function Projects() {
               </Reveal>
 
               <Reveal className={flip ? 'md:order-1' : ''}>
-                <p className="text-sm text-muted">{p.context}</p>
+                <p className="text-sm text-muted">
+                  {p.context} <span className="text-faint">· {p.year}</span>
+                </p>
                 <h3 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
                   {p.title}
                 </h3>

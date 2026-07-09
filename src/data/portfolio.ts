@@ -2,6 +2,7 @@ export const profile = {
   name: 'Naufal Sani',
   role: 'Software Engineer',
   location: 'Jakarta, Indonesia',
+  availability: 'Open to new opportunities',
   current: 'Shopee',
   past: ['EY', 'Samsung', 'Traveloka'],
   tagline:
@@ -16,6 +17,23 @@ export const profile = {
     'Engineering that turns into outcomes — adoption, cost saved, time back — not just shipped features',
   ],
   closing: "Let's build something worth shipping.",
+  // Scannable proof points surfaced in the hero — the numbers a recruiter
+  // would otherwise have to dig out of the experience section.
+  stats: [
+    { value: '4+', label: 'years shipping software' },
+    { value: '30k+', label: 'drivers on Telematics I built' },
+    { value: '3,000+', label: 'Toyota outlets on my team’s platform' },
+    { value: '50+', label: 'Samsung TV models shipped worldwide' },
+  ],
+  // Grouped so the stack reads at a glance.
+  skills: [
+    { group: 'Web', items: ['ReactJS', 'TypeScript', 'TanStack Query', 'Tailwind CSS'] },
+    { group: 'Mobile', items: ['Flutter', 'Firebase', 'App Store & Play releases'] },
+    {
+      group: 'Backend & Cloud',
+      items: ['Java Spring Boot', 'PostgreSQL', 'AWS', 'Azure', 'Terraform'],
+    },
+  ],
   email: 'naufal.sani2001@gmail.com',
   resumeUrl: '/Resume.pdf',
   portrait: '/portrait.jpg',

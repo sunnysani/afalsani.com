@@ -10,14 +10,19 @@ export function About() {
         {/* Portrait — the human anchor */}
         <Reveal>
           <div className="relative mx-auto w-full max-w-xs md:mx-0">
-            <div className="overflow-hidden rounded-lg border border-border">
+            {/* Soft accent halo behind the frame */}
+            <div
+              aria-hidden
+              className="absolute -inset-2 rounded-xl bg-gradient-to-br from-primary/25 via-transparent to-primary/5 blur-md"
+            />
+            <div className="relative overflow-hidden rounded-lg border border-border-strong">
               <img
                 src={profile.portrait}
                 alt={profile.name}
                 className="block aspect-square w-full object-cover"
               />
             </div>
-            <p className="mt-3 text-sm text-faint">{profile.location}</p>
+            <p className="relative mt-3 text-sm text-faint">{profile.location}</p>
           </div>
         </Reveal>
 
@@ -39,6 +44,33 @@ export function About() {
           </div>
         </Reveal>
       </div>
+
+      {/* Toolbox — the stack at a glance, grouped so it scans in seconds */}
+      <Reveal delay={80} className="mt-14 md:mt-20">
+        <p className="label">Toolbox</p>
+        <div className="mt-5 grid gap-4 sm:grid-cols-3">
+          {profile.skills.map((group) => (
+            <div
+              key={group.group}
+              className="rounded-lg border border-border bg-surface/50 p-5 transition-colors hover:border-border-strong"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wider text-faint">
+                {group.group}
+              </p>
+              <ul className="mt-3.5 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-full border border-border px-3 py-1 text-xs text-muted"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Reveal>
     </section>
   )
 }

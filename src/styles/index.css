@@ -92,6 +92,45 @@ body {
   background: var(--color-primary);
 }
 
+/* Gradient sweep on the hero name — foreground fading into the accent.
+   Applied to the whole heading (w-fit) so it flows across both lines. */
+.text-gradient {
+  background: linear-gradient(
+    125deg,
+    var(--color-foreground) 92%,
+    var(--color-primary-soft) 94%,
+    var(--color-primary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Faint blueprint grid behind the hero, masked so it dissolves downward */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    black 25%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 25%, transparent 75%);
+}
+
+/* Warm glow under primary CTAs so they read as the page's main action */
+.btn-glow {
+  box-shadow: 0 10px 34px -12px rgba(255, 37, 99, 0.55);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 16px 44px -12px rgba(255, 37, 99, 0.7);
+}
+
 /* Scroll-reveal: starts hidden, .is-visible slides/fades in */
 .reveal {
   opacity: 0;
